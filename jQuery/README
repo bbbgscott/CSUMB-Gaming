@@ -1,0 +1,24 @@
+By Kevin Miller - Copyleft 2011
+
+This is all my notes from a jQuery Bootcamp at Cal State Monterey Bay. If you're lucky, you might find the webpage for it at http://itcd.csumb.edu/bootcamp. This file is actually the script for the presentation, so follow along, open a cold one, and let's get crackin!
+
+INTRODUCTION
+------------
+
+
+RESOURCES
+---------
+
+Learn all you ever wanted to about how browsers render content:
+
+Crockford on JavaScript
+	Spend like six hours with Douglas Crockford, where he talks about JavaScript, Computer Science, and everything you needed to know about this amazing and frustrating environment.
+	http://yuiblog.com/crockford/
+	
+jQuery Introduction
+	A fourteen-year-old can get this people! Well, a very smart fourteen-year-old...
+	http://www.youtube.com/watch?v=8mwKq7_JlS8
+
+Faster HTML and CSS: Layout Engine Internals for Web Developers
+	A very interesting talk by a senior Mozilla developer about how Mozilla renders content
+	http://www.google.com/url?sa=t&source=video&cd=2&ved=0CEYQtwIwAQ&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Da2_6bGNZ7bA&ei=cbCITa3QHYjQsAOrjZmEDA&usg=AFQjCNH9oLcyn0y-GxhxSh7Ubw1PVAJTXw

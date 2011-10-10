@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <title>jQuery BootCamp</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script> 
+    
+    <link href="stylesheets/screen.css" type="text/css" rel="stylesheet" media="Screen,projection" />
+    <link type="text/css" rel="stylesheet" media="all" href="../examples/javascript/highlight/highlight.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <h1>jQuery Bootcamp</h1>
+      </div>
+    </div>
+    
+    <div id="content">
+      <div id="slides">
+        <div class="slide">
+          <h2>jQuery Bootcamp</h2>
+          <p>By the end of this session, you should be able to do basic manipulations of web pages, know what DOM means, and be on your ways to JavaScript greatness.</p>
+        </div>
+        <div class="slide">
+        	<h2>Our Textbook</h2>
+        	<p>Much of the structure is borrowed from jQuery Fundamentals by Rebecca Murphey</p>
+        	<a href="http://jqfundamentals.com/">jqfundamentals.com</a>
+        </div>
+        <div class="slide">
+          <h2>Some Assumptions</h2>
+          <p>That you know (just a little bit of):</p>
+          <ul>
+          	<li>HTML</li>
+          	<li>CSS</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <h2>HouseCleaning</h2>
+          <p>Install FireBug (FireFox) or FireBug Lite (Chrome)</p>
+          <ul>
+          	<li>HTML</li>
+          	<li>CSS</li>
+          </ul>
+        </div>
+        <div class="slide">
+        	<h2>A (brief) history of JS</h2>
+        	<ul>
+        		<li>Netscape</li>
+        		<li>Applets (uk!)</li>
+        		<li>AJAX</li>
+        		<li>JSON</li>
+        	</ul>
+        </div>
+        <div class="slide">
+        	<h2>JavaScript Intro</h2>
+        	<ul>
+        		<li>Scripting language</li>
+        		<li>Everything* is an object</li>
+        		<li>Functions as well!</li>
+        	</ul>
+        	<p><em>*well... yeah, just believe that</em></p>
+        </div>
+        <div class="slide">
+        	<h2>The DOM</h2>
+        	<p>It's the way the browser sees your HTML Document!</p>
+        	<a href="examples/dom.html" target="_blank">Let's take a look, shall we?</a>
+        </div>
+        <!-- DOM SLIDES -->
+        <div class="slide">
+        	<h2>DOM Structure</h2>
+        	<img src="images/diagrams/dom_structure.png" alt="the DOM structure of the page we just saw"/>
+        </div>
+        <div class="slide">
+        	<h2>Traversing</h2>
+        	<img src="images/diagrams/child_sibling_parent.png" alt="the relationships between children, siblings, and parents"/>
+        </div>
+        <div class="slide">
+        	<h2>The browser flow</h2>
+        	<img src="images/diagrams/browser_flow.png" alt="the standard flow of a browser"/>
+        </div>
+        <div class="slide">
+        	<h2>Continuous flow</h2>
+        	<img src="images/diagrams/new_flow.png" alt="the new continuous flow of a browser"/>
+        </div>
+        
+        <div class="slide">
+        	<h2>The Old Way</h2>
+        	<p>This is why people hate JavaScript...</p>
+        	<ul>
+        		<li>document.getElementsByTagName</li>
+        		<li>document.getElementById</li>
+        	</ul>
+        	<a href="examples/oldway.html" target="_blank">View the bad old days</a>
+        </div>
+         <div class="slide">
+        	<h2>Why jQuery Rocks</h2>
+        	<p>
+        	<a href="examples/future.html" target="_blank">View the bright, shiny future</a>
+        	</p>
+         </div>
+         <div class="slide">
+        	<h2>jQuery 101: document is ready</h2>
+        	<p>When the DOM is loaded, let's do some JS!
+        	</p>
+        	<pre class="code">
+$(document).ready(function() {
+	//Do something!
+});
+        	</pre>
+         </div>
+         <div class="slide">
+        	<h2>jQuery 101: selectors</h2>
+        	<pre class="code">
+$('#myid');    //ID (must be unique)
+$('.myClass'); //class
+$('input[type=text]'); //attributes (can be slow)
+$('.myClass p'); //any CSS compound selector
+
+        	</pre>
+         </div>
+         <div class="slide">
+        	<h2>jQuery 101: special selectors</h2>
+        	<pre class="code">
+$('a:not(.myClass)'); //Any link without the class of "myClass"
+$('input:checked'); //Any checkbox which is checked
+$('div > p'); //Any "p" that's the child of "div"
+$('p:contains("test")'); //Any p that contains the word "test"
+$('tr:even'); //Any "tr" that is even compared to siblings
+$('tr:odd'); //Any "tr" that is odd compared to siblings
+
+        	</pre>
+         </div>
+         <div class="slide">
+        	<h2>jQuery 101: selectors... selected?</h2>
+        	<p>Testing if your selector did something</p>
+        	<pre class="code">
+if($('#myId').length) {
+	//I got something!
+}
+        	</pre>
+         </div>
+         <div class="slide">
+        	<h2>jQuery 101: chaining</h2>
+        	<p>Most jQuery objects return themselves, so...</p>
+        	<pre class="code">
+$('div.myClass').find('p')
+				.eq(2) //Remember, we start at 0
+				.html('I'm the third paragraph');
+        	</pre>
+         </div>
+          <div class="slide">
+        	<h2>jQuery 101: selectors... saving!</h2>
+        	<p>jQuery won't save your memory, save to a variable instead of reuse</p>
+        	<pre class="code">
+var $myMenu = $('#myMenu');
+        	</pre>
+        	<p><em>Note: we're using the dollar sign just for convention</em></p>
+         </div>
+         <div class="slide">
+        	<h2>jQuery 101: selectorathon!</h2>
+        	<p>Let's practice selecting some stuff</p>
+        	<p>Open examples/sandbox.html</p>
+        	<p>First, let's get comfortable with FireBug or Chrome Web Developer.</p>
+        	
+         </div>
+         <div class="slide">
+        	<h2>Content</h2>
+			<pre class="code">
+$('a.myClass').html(); //Get the content of the link
+$('a.myClass').html('<strong>any html</strong> code can go here'); 
+//Set the content
+			</pre>
+		 </div>
+		 <div class="slide">
+        	<h2>Creating content</h2>
+			<pre class="code">
+var $newThing = $('&lt;p&gt;This is my new paragraph&lt;/p&gt;');
+var $thingWithObjects = $('&lt;a /&gt;', {
+						html: 'My content',
+						'class': 'myClass',
+						href: 'index.html'
+						});
+			</pre>
+			<p><strong>Note:</strong>"Class" is reserved, so we use quotes.</p>
+		 </div>
+		 <div class="slide">
+        	<h2>Adding our content</h2>
+			<pre class="code">
+$('<p>This is my new paragraph</p>')
+				.appendTo('div.module');
+$('div.module').append($newThing);
+			</pre>
+		 </div>
+		 <div class="slide">
+        	<h2>Making clones</h2>
+			<pre class="code">
+var $clone = $('.module p').clone();
+			</pre>
+		 </div>
+		 <div class="slide">
+        	<h2>A shortcut:</h2>
+			<pre class="code">
+$('div.module').append('
+			&lt;a href="index.html" class="something"&gt;hi!&lt;/a&gt;);
+			</pre>
+			<p><strong>Note:</strong>We won't get a reference to the link if we do this.</p>
+		 </div>
+		 
+		 <div class="slide">
+        	<h2>Many other ways to insert stuff</h2>
+			<p>There's a big list of them:</p>
+			<ul style="font-family: monospace;">
+				<li>.before()</li>
+				<li>.after()</li>
+				<li>.append()</li>
+				<li>.prepend()</li>
+				<li>.wrap()</li>
+			</ul>
+			<p><strong>wrap is cool:</strong></p>
+			<pre class="code">
+$('p:eq(0)').wrap('&lt;div class="module" /&gt;');
+			</pre>
+		 </div>
+		 
+		 <div class="slide">
+        	<h2>Exercise:</h2>
+			<p>Let's add some random stuff to our sandbox using firebug.</p>
+		 </div>
+		 <div class="slide">
+		 	<h2>Attributes:</h2>
+		 	<p>Attributes are easily manipulated with the .attr() function:</p>
+		 	<pre class="code">
+$('a.myClass').attr('href'); //get href
+$('a.myClass').attr('href', 'index.html'); //set href
+//Set a list via classes
+$('a.myClass').attr({href : 'index.html',
+					 rel  : 'external'});
+//Set via functions
+$('a.myClass').attr({href : 'index.html',  
+					 rel  : function(idx, rel) {
+					 	//OMG!
+					 	return 'external';
+					 }
+				   });
+		 	</pre>
+		 	<p>Let's play with this a minute...</p>
+		 </div>
+         <div class="slide">
+        	<h2>Style</h2>
+			<pre class="code">
+$('a.myClass').css('background') //getter
+$('a.myClass').css('background', 'green'); //setter
+			</pre>
+		 </div>
+		 <div class="slide">
+        	<h2>Style with classes</h2>
+        	<p>Because the "class" attribute can have many classes, it's best to use:</p>
+			<pre class="code">
+$('p').addClass('awesomeClass');
+$('p').removeClass('awesomeClass');
+			</pre>
+		 </div>
+         <div class="slide">
+        	<h2>Events</h2>
+        	<p>Way coolest part of JavaScript!</p>
+			<pre class="code">
+$('#eventifyMe');
+        	</pre>
+        	<p>Let's practice events, everyone gets an event card.</p>
+        	<p style="text-align: center;">
+        		<a href="#">Event Me!</a>
+        	</p>
+        	
+         </div>
+         <div class="slide">
+        	<h2>"Binding" events</h2>
+			<pre class="code">
+$('.module').bind('click', function() {
+	console.log('I was clicked!');
+});
+        	</pre>
+         </div>
+         <div class="slide">
+        	<h2>Shortcuts</h2>
+			<pre class="code">
+$('.module').click(function() {
+	console.log('I was clicked!');
+});
+        	</pre>
+        	<ul>
+        		<li>blur</li>
+        		<li>click</li>
+        		<li>dblclick</li>
+        		<li>dblclick</li>
+        		load
+        		focus
+        		focusin
+        		focusout
+        		hover
+        		keydown
+        		keyup
+        		keypress
+        		mousedown
+        		mouseenter
+        		mouseleave
+        		mousemove
+        		mouseout
+        		mouseover
+        		mouseup
+        		ready
+        		resize
+        		scroll
+        		select
+        		submit
+        		
+        	</ul>
+         </div>
+         <div class="slide">
+         	<h2>"Bind" vs. "Live"</h2>
+         	<p>Take this code:</p>
+         	<pre class="code">
+$('.clickme').bind('click', function() {
+  // Bound handler called.
+});
+			</pre>
+			<p>But if you do this:</p>
+			<pre class="code">
+$('body').append('<div class="clickme">Another target</div>');
+			</pre>
+			<p>Then the event won't fire. However, "live" will watch for that:</p>
+			<pre class="code">
+$('.clickme').live('click', function() {
+  // Bound handler called.
+});
+			</pre>
+
+         </div>
+         <div class="slide">
+        	<h2>"AJAX" is not really "AJAX"</h2>
+			<p>It can actually retrieve anything, mostly HTML or JSON</p>
+			<ul>
+				<li>Same-origin policy (why we can't do this locally)</li>
+				<li>Anything can be returned, really.</li>
+				<li>There's a single ".ajax()" method, but some other helpful ones:
+					<ul>
+						<li>.get()</li>
+						<li>.post()</li>
+						<li>.getJSON()</li>
+						<li>.getScript() - helpful for auto-loading</li>
+					</ul>
+				</li>
+			</ul>
+         </div>
+         <div class="slide">
+        	<h2>Standard GET Request</h2>
+        	<p>Note that we are using this as a method on the jQuery object itself.</p>
+        				<pre class="code">
+$.get('something.php', function(data) {
+	$('body').append(data);
+});
+			</pre>
+		</div>
+		<div class="slide">
+        	<h2>Standard POST Request</h2>
+        	<p>Note that we are using this as a method on the jQuery object itself.</p>
+        				<pre class="code">
+$.get('something.php', function(data) {
+	$('body').append(data);
+});
+			</pre>
+		</div>
+      </div>
+    </div>
+    
+    <div id="footer">
+      <div class="container">
+        
+      </div>
+    </div>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jquery.presentation-full.js"></script>
+    <script type="text/javascript" src="../examples/javascript/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../examples/javascript/code.js"></script>
+    <script>
+    	$(document).ready(function() {
+		  $('#slides').presentation();
+		});
+    </script>
+  </body>
+</html>

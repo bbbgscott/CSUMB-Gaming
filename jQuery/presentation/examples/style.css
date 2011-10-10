@@ -1,0 +1,8 @@
+body { font-family: "Helvetica neue", Helvetica, Arial, sans-serif; }
+.clear { clear: both; }
+.header { background: #8dd3f5; padding: 10px; }
+	ul.navigation { margin: 4px; }
+		ul.navigation li { float: left; list-style-type: none; margin: 10px; }
+		ul.navigation li a { color: #fff; }
+.page   { background: #fff; padding: 20px;}
+.footer { background: #ea5e22; color: #fff; font-weight: bold; padding: 10px;}

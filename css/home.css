@@ -1,0 +1,28 @@
+#content
+{
+	min-height: 600px;
+	min-width: 800px;
+	margin: 10px;
+ /* box-shadow: color x  y   difuse; */
+	box-shadow: #D31111 5px 5px 10px;
+	color: white;
+	background-color: #09090A;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+#sidebar
+{
+	float: right;
+	width: 30%;
+	min-height: 600px;
+	height: auto;
+	background-color: transparent;
+	border-left: ridge;
+	border-color: #D31111;
+	border-radius: 50px;
+}
+
+#sidebar h1 {text-align: center; color: #D31111; }
+
+#sidebar p { text-align: center; text-decoration: underline; }

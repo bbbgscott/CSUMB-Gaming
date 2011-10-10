@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>AJAX Post</title>
+	<link href="styles/sandbox.css" rel="stylesheet" type="text/css" media="all" />
+	</head>
+	<body>
+		<a class="generate" href="server/get.php">Click me to generate a number!</a>
+		<div id="output">We gave you number <span class="placeholder">0</span>.</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('a.generate').click(function(){
+				$.get($(this).attr('href'), function(data) {
+					$('.placeholder').html(data);
+				});
+				return false;
+			});
+		});
+	</script>
+</html>

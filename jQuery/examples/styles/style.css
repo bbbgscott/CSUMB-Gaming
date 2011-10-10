@@ -1,0 +1,36 @@
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background: #b1cdc1; }
+	.page { width: 900px; margin: 0 auto; background: #f3f3f3; padding: 20px; box-shadow: 3px 3px 5px rgba(0,0,0,0.6); -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.6); -moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.6); overflow: hidden; }
+h1 { font-size: 3em; margin: 0 0 .5em 0;  color: #c1413b; text-shadow: 2px 2px #fff; -moz-text-shadow: 2px 2px #fff; -webkit-text-shadow: 2px 2px #fff; position: relative; font-family: Georgia, "Times New Roman", Times, serif; }
+	h1 .example { font-size: .5em;
+position: absolute;
+padding: 4px;
+top: 30px;
+right: -100px;
+color: #259a9d;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+-moz-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+display: block;
+background: white;
+width: 300px;
+text-align: center;
+-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+ }
+.intro { font-size: 120%; }
+h2,h3,h4,h5,h6 { text-shadow: 2px 2px #fff; -moz-text-shadow: 2px 2px #fff; -webkit-text-shadow: 2px 2px #fff; }
+a { color:#358; text-decoration:underline; }
+a:hover { text-decoration:none; color:#003355; }
+
+p { margin-bottom:1em; }
+blockquote { margin:1em; }
+li {  }
+ul,ol { margin-left:1em; margin-bottom:0.5em; }
+
+.code { background: #ccc; padding: 10px; }
+.code h3 { font-family: monospace;  font-size: 2em;}
+.code pre { font-size: 130%; }

@@ -1,0 +1,98 @@
+/*Color Scheme: #09090A(Black), #D31111(Red) */
+
+h2
+{
+	color: white; 
+	text-align: center;
+}
+
+#content
+{
+	min-height: 600px;
+	height: auto;
+	min-width: 800px;
+	margin: 10px;
+ /* box-shadow: color x  y   difuse; */
+	box-shadow: #D31111 5px 5px 10px;
+	color: white;
+	background-color: #09090A;
+}
+
+#content p 
+{ 
+	text-align: center;
+	padding-left: 150px;
+	padding-right: 150px;
+}
+
+#sidebar
+{
+	float: right;
+	width: 30%;
+	min-height: 600px;
+	height: auto;
+	background-color: transparent;
+}
+
+#sidebar h1 {text-align: center; color: #D31111; }
+
+#sidebar p { text-align: center; text-decoration: underline; }
+
+#logo
+{
+	float: left;
+	margin: auto;
+}
+
+#logo img{ margin: auto; }
+
+#blurb
+{
+	float: left;
+	width: auto;
+	max-width: 69%;
+	height: auto;
+}
+
+#blurb h1 { color: #D31111; text-align: center; }
+
+#blurb p { margin-left: 30px; }
+
+.step_form
+{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 150px;
+}
+
+#step2 { max-width: 300px; }
+
+.step_form label
+{
+	float: left;
+	width: 100px;
+	padding-bottom: 5px;
+}
+
+.step_form input
+{
+	float: left;
+}
+
+.about
+{
+	min-height: 150px;
+	border: thin;
+	border-color: white;
+}
+
+#footer
+{
+	color: #fff;
+	background-color: #000;
+}
+
+#footer p
+{
+	text-align: center;
+}

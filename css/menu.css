@@ -1,0 +1,96 @@
+.main_drop a:hover{
+	background-color: #333;
+	border-radius: 30px;
+}
+
+ul.dropdown {
+	font: normal 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: #000;
+	height: 29px;
+	position: static;
+	top: 0%;
+	left: 30%;
+	right: 33%;
+	z-index: 597;
+}
+
+ul.dropdown a.open { background-color: #2e2e2e; color: #d31111/*#76b900*/; }
+ul.dropdown a:link,
+ul.dropdown a:visited { color: #fff; text-decoration: none; }
+ul.dropdown a:hover { color: #d31111/*#76b900*/; text-decoration: none; }
+ul.dropdown a:active { color: #fff; }
+
+ul.dropdown li {
+	background-color: #000;
+	color: #fff;
+	line-height: normal;
+	min-width: 100px;
+	width: 25%;
+	float: left;
+	/*line-height: 1%;*/
+	vertical-align: middle;
+}
+
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+	position: relative;
+	z-index: 599;
+	cursor: default;
+}
+
+ul.dropdown li:hover > ul { visibility: visible; }
+
+ul.dropdown li a { display: block; padding: 7px 14px;}
+
+ul.dropdown ul {
+	width: 100px;
+	background-color: #333;
+	color: #fff;
+	font-size: 11px;
+	text-transform: none;
+	opacity: .9;
+	text-align: left;
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	z-index: 598;
+}
+
+ul.dropdown ul a { padding: 4px 5px 4px 14px; width: 100%;}
+
+ul.dropdown ul a.open { background-color: #d31111/*#76b900*/; color: #fff;	}
+ul.dropdown ul a:link,
+ul.dropdown ul a:visited { color: #fff; }
+
+ul.dropdown ul a:hover { 
+	color: #fff; 
+	text-decoration: none;
+	background-color: #d31111/*#76b900*/;
+}
+
+ul.dropdown ul a:active { color: #fff; }
+
+ul.dropdown ul li {
+	background-color: transparent;
+	color: #fff;
+	float: none;
+}
+
+ul.dropdown ul li.hover,
+ul.dropdown ul li:hover { background-color: transparent; }
+
+ul.dropdown,
+ul.dropdown li,
+ul.dropdown ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.dropdown ul ul { top: 0%; left: 50%; }
+
+ul.dropdown li ul li ul li a { width: 100%;	}
+/*#home {color: #D31111; }*/
